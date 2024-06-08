@@ -13,4 +13,8 @@
   .btn {
     @apply flex font-medium hover:text-gray-500 px-2;
   }
+
+  .prose {
+    @apply max-w-full;
+  }
 }

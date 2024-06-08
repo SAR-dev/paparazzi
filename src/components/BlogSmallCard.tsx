@@ -1,6 +1,8 @@
+import { Link } from "react-router-dom";
+
 export const BlogSmallCard = () => {
   return (
-    <div className="flex flex-col gap-5 group cursor-pointer">
+    <Link to="/articles/1" className="flex flex-col gap-5 group cursor-pointer">
       <div className="h-64 w-full rounded-xl overflow-hidden">
         <img
           className="h-64 w-full object-cover group-hover:scale-110 duration-200"
@@ -20,6 +22,6 @@ export const BlogSmallCard = () => {
         <div>|</div>
         <div>March 12, 2025</div>
       </div>
-    </div>
+    </Link>
   );
 };

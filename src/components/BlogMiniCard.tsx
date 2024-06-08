@@ -1,6 +1,8 @@
+import { Link } from "react-router-dom";
+
 export const BlogMiniCard = () => {
   return (
-    <div className="p-5 grid grid-cols-5 gap-3">
+    <Link to="/articles/1" className="p-5 grid grid-cols-5 gap-3">
       <div className="col-span-2 h-28 overflow-hidden">
         <img
           className="h-28 w-full rounded-lg object-cover"
@@ -23,6 +25,6 @@ export const BlogMiniCard = () => {
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };

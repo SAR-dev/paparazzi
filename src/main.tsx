@@ -4,6 +4,7 @@ import './index.css';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { Home } from './pages/Home';
 import { Articles } from './pages/Articles';
+import { SingleArticle } from './pages/SingleArticle';
 
 const router = createBrowserRouter([
   {
@@ -13,6 +14,10 @@ const router = createBrowserRouter([
   {
     path: '/articles',
     element: <Articles />,
+  },
+  {
+    path: '/articles/:id',
+    element: <SingleArticle />,
   },
 ]);
 
