@@ -1,6 +1,8 @@
+import { Link } from "react-router-dom";
+
 export const CoverCard = () => {
   return (
-    <div className="w-full p-5 rounded-xl border border-gray-300 bg-gray-100 hover:bg-white shadow-sm hover:-translate-y-1 duration-200 cursor-pointer">
+    <Link to="/articles/1" className="w-full p-5 rounded-xl border border-gray-300 bg-gray-100 hover:bg-white shadow-sm hover:-translate-y-1 duration-200 cursor-pointer">
       <div className="grid grid-cols-2 gap-5">
         <div className="flex flex-col justify-between">
           <div>
@@ -33,6 +35,6 @@ export const CoverCard = () => {
           />
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
