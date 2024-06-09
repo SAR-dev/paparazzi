@@ -1,15 +1,24 @@
+import {useRef} from "react"
 import { ChevronRightIcon } from '@heroicons/react/24/solid';
 import { NavBar } from '../components/NavBar';
 import { CoverCard } from '../components/CoverCard';
 import { BlogSmallCard } from '../components/BlogSmallCard';
 import { BlogMiniCard } from '../components/BlogMiniCard';
+import { useInViewport } from 'ahooks';
+import classNames from 'classnames';
 
 export const Home = () => {
+  const ref = useRef(null);
+  const [inViewport] = useInViewport(ref);
+
   return (
     <div>
       <NavBar />
-      <div className="w-full flex flex-row">
-        <div className="p-16 w-full max-w-screen-2xl mx-auto">
+      <div className="w-full flex flex-row relative justify-center">
+        <div  className={classNames({
+            'p-16 w-full max-w-screen-2xl mx-auto': true,
+            'p-16 w-full max-w-screen-2xl mx-auto absolute': !inViewport,
+          })}>
           <div className="grid grid-cols-1 gap-20">
             {/* Card */}
             <CoverCard />
@@ -29,10 +38,10 @@ export const Home = () => {
             </div>
           </div>
         </div>
-        <div className="ml-auto h-screen w-[35rem] border-l border-gray-300 sticky top-[4rem]">
-          <div className="flex flex-col divide-y divide-gray-300">
+        <div className="ml-auto w-[35rem]">
+          <div className="flex flex-col divide-y divide-gray-300 border-l border-b border-gray-300" ref={ref}>
             <div className="p-5 text-xl font-medium">Featured Posts</div>
-            {[...Array(10)].map((_, i) => (
+            {[...Array(6)].map((_, i) => (
               <BlogMiniCard key={i} />
             ))}
           </div>

@@ -72,6 +72,9 @@ export const SingleArticle = () => {
         <div>
             <NavBar />
             <div className="p-16 w-full max-w-screen-lg mx-auto">
+                <div className="h-96 w-full rounded-lg mb-8">
+                    <img className='h-96 w-full rounded-lg object-cover' src="https://i.ibb.co/PtzFG5n/image.png" alt="" />
+                </div>
                 <div className="flex text-center items-center w-full flex-col gap-8">
                     <div className="text-5xl font-medium">The History Of Web Design</div>
                     <div className="flex items-center gap-2">
