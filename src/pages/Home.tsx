@@ -39,7 +39,7 @@ export const Home = () => {
             </div>
           </div>
         </div>
-        <div className="ml-auto w-[35rem]">
+        <div className="ml-auto w-[30rem] flex-shrink-0">
           <div className="flex flex-col divide-y divide-gray-300 border-l border-b border-gray-300" ref={ref}>
             <div className="p-5 text-xl font-medium">Featured Posts</div>
             {[...Array(6)].map((_, i) => (
