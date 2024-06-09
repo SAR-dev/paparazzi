@@ -23,7 +23,7 @@ export const Home = () => {
       <div className="w-full flex flex-row relative justify-center overflow-hidden">
         <div className={classNames({
           "transition ease-in-out duration-300 w-3/4": true,
-          "translate-x-[10%]": (scroll?.top || 0) > (size?.height || 0)
+          "translate-x-[15%]": (scroll?.top || 0) > (size?.height || 0)
         })}>
           <div className="p-16 w-full mx-auto">
             <div className="grid grid-cols-1 gap-20">
