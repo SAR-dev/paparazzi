@@ -1,4 +1,4 @@
-import {useRef} from "react"
+import { useRef } from "react"
 import { ChevronRightIcon } from '@heroicons/react/24/solid';
 import { NavBar } from '../components/NavBar';
 import { CoverCard } from '../components/CoverCard';
@@ -15,9 +15,10 @@ export const Home = () => {
     <div>
       <NavBar />
       <div className="w-full flex flex-row relative justify-center">
-        <div  className={classNames({
-            'p-16 w-full max-w-screen-2xl mx-auto': true,
-            'p-16 w-full max-w-screen-2xl mx-auto absolute': !inViewport,
+        <div
+          className={classNames({
+            'p-16 w-full max-w-screen-xl mx-auto': true,
+            'p-16 w-full max-w-screen-xl mx-auto absolute': !inViewport,
           })}>
           <div className="grid grid-cols-1 gap-20">
             {/* Card */}
