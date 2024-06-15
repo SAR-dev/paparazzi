@@ -71,12 +71,12 @@ export const SingleArticle = () => {
     return (
         <div>
             <NavBar />
-            <div className="p-16 w-full max-w-screen-lg mx-auto">
+            <div className="md:p-16 p-5 w-full max-w-screen-lg mx-auto">
                 <div className="h-96 w-full rounded-lg mb-8">
                     <img className='h-96 w-full rounded-lg object-cover' src="https://i.ibb.co/PtzFG5n/image.png" alt="" />
                 </div>
-                <div className="flex text-center items-center w-full flex-col gap-8">
-                    <div className="text-5xl font-medium">The History Of Web Design</div>
+                <div className="flex text-center items-center w-full flex-col md:gap-8 gap-3">
+                    <div className="md:text-5xl text-3xl font-medium">The History Of Web Design</div>
                     <div className="flex items-center gap-2">
                         <img
                             className='h-8 w-8 rounded-full object-cover'
@@ -89,7 +89,7 @@ export const SingleArticle = () => {
                     <div className="text-gray-600">March 27, 2025</div>
                 </div>
 
-                <div className='prose mx-auto mt-12'>
+                <div className='md:prose prose-sm mx-auto mt-12'>
                     <Markdown>{articleMD}</Markdown>
                 </div>
 
@@ -101,7 +101,7 @@ export const SingleArticle = () => {
                     </button>
                 </div>
 
-                <div className="grid grid-cols-2 gap-10">
+                <div className="grid md:grid-cols-2 grid-cols-1 gap-10">
                     {[...Array(14)].map((_, i) => (
                         <BlogSmallCard key={i} />
                     ))}

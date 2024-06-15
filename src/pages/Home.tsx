@@ -20,12 +20,12 @@ export const Home = () => {
   return (
     <div>
       <NavBar />
-      <div className="w-full flex flex-row relative justify-center overflow-hidden">
+      <div className="w-full flex md:flex-row flex-col relative justify-center overflow-hidden">
         <div className={classNames({
-          "transition ease-in-out duration-300 w-3/4": true,
-          "translate-x-[15%]": (scroll?.top || 0) > (size?.height || 0)
+          "transition ease-in-out duration-300 md:w-3/4 w-full": true,
+          "md:translate-x-[15%]": (scroll?.top || 0) > (size?.height || 0)
         })}>
-          <div className="p-16 w-full mx-auto">
+          <div className="md:p-16 p-5 w-full mx-auto">
             <div className="grid grid-cols-1 gap-20">
               {/* Card */}
               <CoverCard />
@@ -38,7 +38,7 @@ export const Home = () => {
                 </button>
               </div>
 
-              <div className="grid grid-cols-3 gap-10 -mt-10">
+              <div className="grid md:grid-cols-3 grid-cols-1 gap-10 -mt-10">
                 {[...Array(15)].map((_, i) => (
                   <BlogSmallCard key={i} />
                 ))}
@@ -47,8 +47,8 @@ export const Home = () => {
           </div>
         </div>
         <div className={classNames({
-          "transition ease-in-out duration-300 w-1/4 relative": true,
-          "translate-x-[100%]": (scroll?.top || 0) > (size?.height || 0)
+          "transition ease-in-out duration-300 md:w-1/4 w-full relative": true,
+          "md:translate-x-[100%]": (scroll?.top || 0) > (size?.height || 0)
         })}>
           <div className="flex flex-col divide-y divide-gray-300 border-l border-b border-gray-300" ref={sizeRef}>
             <div className="p-5 text-xl font-medium">Featured Posts</div>
